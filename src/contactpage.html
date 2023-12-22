@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-yellow-200 text-white">
 
@@ -25,7 +24,7 @@
         </div>
     </header>
 
-    <header class="bg-yellow-300 text-center fixed top-0 w-full py-1 z-10 hidden md:block md:bg-yellow-300 md:text-right md:fixed md:top-0 md:w-full md:py-4 md:z-10">        <nav class="headerss">
+    <header class="contactheader bg-yellow-300 text-center fixed top-0 w-full py-1 z-10 hidden md:block md:bg-yellow-300 md:text-right md:fixed md:top-0 md:w-full md:py-4 md:z-10">        <nav class="headerss">
             <a href="homepage.html"class="mr-4">Home</a>
             <a href="resumepage.html"class="mr-4">Resume</a>
             <a href="servicepage.html"class="mr-4">Services</a>
@@ -88,7 +87,18 @@
                 class="text-brown-800 hover:text-brown-600"><i class="fab fa-facebook"></i></a>
         </div>
     </footer>
+    <script>
+        // JavaScript for handling the toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menuIcon = document.getElementById('menu-icon');
+            var menu = document.getElementById('menu');
 
+            menuIcon.addEventListener('click', function () {
+                menu.style.display = menuToggle.checked ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 
 </html>

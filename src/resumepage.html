@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sara Mohammed's Professional Profile</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -18,36 +17,36 @@
     
         <div id="menu" x-show="open" class="bg-yellow-200 md:hidden">
             <nav class="headers">
-                <a href="homepage.html" class="mr-4">Home</a>
-            <a href="aboutpage.html" class="mr-4">About</a>
-            <a href="blogpage.html" class="mr-4">Blog</a>
-            <a href="servicepage.html" class="mr-4">Services</a>
+                <a href="homepage.html">Home</a>
+                <a href="resumepage.html">Resume</a>
+                <a href="servicepage.html">Services</a>
+                <a href="aboutpage.html">About</a>
             </nav>
         </div>
     </header>
     <header
-        class="bg-yellow-300 text-center fixed top-0 w-full py-4 z-10 hidden md:block md:bg-yellow-300 md:text-right md:fixed md:top-0 md:w-full md:py-4 md:z-10">
+        class="resumeheader bg-yellow-300 text-center fixed top-0 w-full py-4 z-10 hidden md:block md:bg-yellow-300 md:text-right md:fixed md:top-0 md:w-full md:py-4 md:z-10">
         <nav class="headerss">
             <a href="homepage.html" class="mr-4">Home</a>
             <a href="aboutpage.html" class="mr-4">About</a>
             <a href="blogpage.html" class="mr-4">Blog</a>
-            <a href="servicepage.html" class="mr-4">Services</a>
+            <a href="servicepage.html">Services</a>
         </nav>
     </header>
 
-    <div class="text-center h-60 relative">
+    <div class="rcontainer text-center h-60 relative">
         <img src="images/resumebg.jpg" alt="Main Image" class="w-full h-5/6 my-4 mx-2 rounded">
     </div>
 
-    <div class="relative w-40 h-40 border-2 border-white rounded-full mx-auto -mt-16 overflow-hidden">
+    <div class="rupper-circle relative w-40 h-40 border-2 border-white rounded-full mx-auto -mt-16 overflow-hidden">
         <img src="images/profile.jpg" alt="Circle Image"
             class="w-full h-full object-cover filter brightness-80 shadow-md animate-imageSlide">
     </div>
     <h3 id="resumename" class="text-3xl mt-6 mx-12 font-bold text-brown-800">Sara Mohammed</h3>
 
     <div class="flex flex-col md:flex-row md:space-x-6 mx-4 mt-8">
-        <div class="w-full md:w-1/3 mb-4">
-            <div class="bg-yellow-200 p-4 rounded">
+        <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
+            <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
                 <h2 class="text-2xl text-brown-800">Professional Goal</h2>
                 <p class="text-white">Aspiring software engineer with a passion for crafting innovative solutions.
                     Seeking opportunities to contribute my skills in graphics UI/UX design and web development to
@@ -55,7 +54,7 @@
             </div>
         </div>
 
-        <div class="w-full md:w-1/3 mb-4">
+        <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
             <div class="bg-yellow-200 p-4 rounded">
                 <h2 class="text-2xl text-brown-800">Work Experience</h2>
                 <p class="text-white">Graphics UI/UX Designer | 2020 - Present</p>
@@ -72,7 +71,7 @@
             </div>
         </div>
 
-        <div class="w-full md:w-1/3 mb-4">
+        <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
             <div class="bg-yellow-200 p-4 rounded">
                 <h2 class="text-2xl text-brown-800">Academic History</h2>
                 <p class="text-white">I embarked on my educational journey at the Ethiopian Embassy School in Saudi
@@ -85,21 +84,32 @@
         </div>
     </div>
 
-    <div class="bg-yellow-200 p-4 rounded mt-4">
+    <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
         <h2 class="text-2xl text-brown-800">Specializations</h2>
         <p class="text-white">Graphics UI/UX Design, Web Development, Software Engineering</p>
     </div>
 
-    <div class="bg-yellow-200 p-4 rounded mt-4">
+    <div class="rfull-width-section bg-yellow-200 p-4 rounded mt-4">
         <h2 class="text-2xl text-brown-800">Languages Spoken</h2>
         <p class="text-white">English, Amharic, Arabic</p>
     </div>
 
-    <footer class="bg-yellow-300 text-center py-4 fixed bottom-0 w-full hidden md:block">
+    <footer class="resumefooter bg-yellow-300 text-center py-4 fixed bottom-0 w-full hidden md:block">
         <a href="contact.html" class="text-brown-800 hover:underline">Contact Me</a>
     </footer>
 
-    
+    <script>
+        // JavaScript for handling the toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menuIcon = document.getElementById('menu-icon');
+            var menu = document.getElementById('menu');
+
+            menuIcon.addEventListener('click', function () {
+                menu.style.display = menuToggle.checked ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 
 </html>
