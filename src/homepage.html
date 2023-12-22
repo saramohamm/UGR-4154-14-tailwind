@@ -5,44 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body>
+<body class="bg-gray-200 font-sans">
+
     <header class="header">
         <h2> Home</h2>
     </header>
 
-    <div class="container">
-        <img src="images/backgroung.jpg" alt="Main Image" class="main-image">
-        <h1 class="main-text">Hi, I'm <span>Sara</span></h1>
-    
-        <h2 class="next-text">Software Developer & <span>Designer</span></h2>
+    <div class="container w-9/10 ">
+        <img src="images/backgroung.jpg" alt="Main Image" class="main-image w-full h-70vh">
+        <h1 class="main-text absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl font-bold text-brown-800">
+            Hi, I'm <span class="text-yellow-500">Sara</span>
+        </h1>
 
-        <div class="circle-container">
-            <div class="circle">
-                <div class="circle-text"><a href="aboutpage.html"> About Me </a></div>
+        <h2 class="next-text absolute top-1/3 left-1/2 transform -translate-x-1/2 text-1xl font-bold text-brown-800 position-relative">
+            Software Developer & <span class="text-yellow-500">Designer</span>
+        </h2>
+
+        <div class="circle-container flex flex-wrap justify-center top-0 transform -translate-x-1/10 -translate-y-1/5">
+            <div class="circle relative w-48 h-48 border-4 border-yellow-300 rounded-full overflow-hidden m-4 cursor-pointer hover:bg-yellow-400 transform hover:-translate-y-2 transition-transform top-0">
+                <div class="circle-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-brown-800">
+                    <a href="aboutpage.html"> About Me </a>
+                </div>
             </div>
-            <div class="circle">
-                <div class="circle-text"><a href="resumepage.html"> Resume </a></div>
+            <div class="circle relative w-48 h-48 border-4 border-yellow-300 rounded-full overflow-hidden m-4 cursor-pointer hover:bg-yellow-400 transform hover:-translate-y-2 transition-transform">
+                <div class="circle-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-brown-800">
+                    <a href="resumepage.html"> Resume </a>
+                </div>
             </div>
-            <div class="circle">
-                <div class="circle-text"><a href="servicepage.html"> Service </a></div>
+            <div class="circle relative w-48 h-48 border-4 border-yellow-300 rounded-full overflow-hidden m-4 cursor-pointer hover:bg-yellow-400 transform hover:-translate-y-2 transition-transform">
+                <div class="circle-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-brown-800">
+                    <a href="servicepage.html"> Service </a>
+                </div>
             </div>
-            <div class="circle">
-                <div class="circle-text"><a href="blogpage.html"> Blog </a></div>
+            <div class="circle relative w-48 h-48 border-4 border-yellow-300 rounded-full overflow-hidden m-4 cursor-pointer hover:bg-yellow-400 transform hover:-translate-y-2 transition-transform">
+                <div class="circle-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-brown-800">
+                    <a href="blogpage.html"> Blog </a>
+                </div>
             </div>
         </div>
-        <div class="upper-circle">
-            <img src="images/profile.jpg" alt="Circle Image" class="upper-circle">
+
+        <div class="upper-circle w-36 h-36 border-2 border-yellow-300 rounded-full overflow-hidden absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <img src="images/profile.jpg" alt="Circle Image" class="w-full h-full object-cover filter brightness-80 hover:brightness-90 transition-all">
         </div>
     </div>
 
-    <footer>
-        <a href="contactpage.html">Contact Me</a>
+    <footer class="text-center py-2 bg-yellow-300 text-brown-800 fixed bottom-0 w-full">
+        <a href="contactpage.html" class="hover:underline">Contact Me</a>
     </footer>
 
 </body>

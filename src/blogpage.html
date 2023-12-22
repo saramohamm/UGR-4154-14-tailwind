@@ -5,49 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
+<body class="bg-yellow-200 text-white">
 
-<body>
-
-    <header class="blogheader">
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="aboutpage.html">About</a>
-            <a href="resumepage.html">Resume</a>
-            <a href="servicepage.html">Services</a>
-        </nav>
+    <header x-data="{ open: false }" class="bg-yellow-300 p-2">
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" id="menu-icon" @click="open = !open" class="cursor-pointer md:hidden">&#9776;</label>
+    
+        <div id="menu" x-show="open" class="bg-yellow-200 md:hidden">
+            <nav class="headers p-3">
+                <a href="homepage.html"class="mr-4">Home</a>
+            <a href="aboutpage.html"class="mr-4">About</a>
+            <a href="resumepage.html"class="mr-4">Resume</a>
+            <a href="servicepage.html"class="mr-4">Services</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="bcontent">
-        <h1 style="font-family: 'Playfair Display', serif;">Blog</h1>
+    <header class="bg-yellow-300 text-center fixed top-0 w-full py-3 z-10 hidden md:block md:bg-yellow-300 md:text-right md:fixed md:top-0 md:w-full md:py-4 md:z-10">        <nav class="headerss">
+            <a href="homepage.html"class="mr-4">Home</a>
+            <a href="aboutpage.html"class="mr-4">About</a>
+            <a href="resumepage.html"class="mr-4">Resume</a>
+            <a href="servicepage.html"class="mr-4">Services</a>
+        </nav> 
+    </header>
 
-        <div class="bvideo-container">
-            <iframe src="videos/sciencemuseum.mp4" frameborder="0" allowfullscreen></iframe>
-            <p>Explore the wonders of the Ethiopian Science Museum in this captivating video. Learn about the fascinating exhibits, interactive displays, and the museum's contribution to promoting scientific knowledge in Ethiopia.</p>
+    
+
+    <div class="bcontent mt-20 px-4 md:px-8 flex flex-wrap justify-around">
+        <h1 class="text-4xl text-yellow-800 font-serif mb-8 w-full">Blog</h1>
+
+        <div class="bvideo-container mb-8 w-full md:w-1/3">
+            <iframe src="videos/sciencemuseum.mp4" frameborder="0" class="w-full h-64 md:h-96 rounded"
+                allowfullscreen></iframe>
+            <p class="max-w-xl mx-auto mt-4 text-yellow-600">Explore the wonders of the Ethiopian Science Museum in this captivating
+                video. Learn about the fascinating exhibits, interactive displays, and the museum's contribution to
+                promoting scientific knowledge in Ethiopia.</p>
         </div>
 
-        <div class="bcontainer">
-            <img src="images/sunset.jpg" alt="Image 1">
-            <p> Witness a breathtaking sunset over the Ethiopian mountains. The vibrant colors and serene landscape create a mesmerizing scene, capturing the beauty of nature.This make it a perfect moment to share.</p>
+        <div class="bcontainer mb-8 w-full md:w-1/3">
+            <img src="images/sunset.jpg" alt="Image 1" class="w-full h-64 md:h-96 object-cover rounded">
+            <p class="max-w-xl mx-auto mt-4 text-yellow-600">Witness a breathtaking sunset over the Ethiopian mountains. The vibrant colors
+                and serene landscape create a mesmerizing scene, capturing the beauty of nature. This makes it a perfect
+                moment to share.</p>
         </div>
 
-        <div class="bcontainer">
-            <img src="images/rain.jpg" alt="Image 2">
-            <p>Experience the charm of city streets during a rainy day in Ethiopia. The reflections on the wet pavement add an artistic touch, transforming the urban environment into a captivating scene.</p>
+        <div class="bcontainer mb-8 w-full md:w-1/3">
+            <img src="images/rain.jpg" alt="Image 2" class="w-full h-64 md:h-96 object-cover rounded">
+            <p class="max-w-xl mx-auto mt-4 text-yellow-600">Experience the charm of city streets during a rainy day in Ethiopia. The
+                reflections on the wet pavement add an artistic touch, transforming the urban environment into a
+                captivating scene.</p>
         </div>
 
-        <div class="baudio-container">
-            <audio controls>
+        <div class="baudio-container mb-8 w-full">
+            <audio controls class="w-full">
                 <source src="audios/calmingaudio.mp3" type="audio/mp3">
                 Your browser does not support the audio tag.
             </audio>
-            <p>Listen to this calming instrumental music while reading a book or working. It's perfect for creating a focused and tranquil environment.</p>
+            <p class="max-w-xl mx-auto mt-4 text-yellow-600">Listen to this calming instrumental music while reading a book or working.
+                It's perfect for creating a focused and tranquil environment.</p>
         </div>
     </div>
 
-    <footer class="blogfooter">
-        <a href="contactpage.html">Contact Me</a>
+    <footer class="blogfooter text-center py-2 bg-yellow-300 text-brown-800">
+        <a href="contactpage.html" class="hover:underline">Contact Me</a>
     </footer>
 
 </body>
